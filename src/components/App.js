@@ -70,7 +70,7 @@ this.setState({
             
             <div
               className="ball"
-              style={{ top: this.state.y, left: this.state.x }}
+              style={{ top: `${this.state.y}px`, left: `${this.state.x}px` }}
             ></div>
             <div className="hole"></div>
           </div>
