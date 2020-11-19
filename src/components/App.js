@@ -5,6 +5,9 @@ class Timer extends React.Component {
     super(props);
     this.state = { time: 0, x: 0, y: 0, started: false };
     this.timerIntervalId  = 0;
+    this.startGame.bind(this);
+    this.timer.bind(this);
+    this.ballMovement.bind(this);
   }
   
   componentDidMount() {
@@ -16,20 +19,20 @@ class Timer extends React.Component {
   }
 
 
-  startGame = () => {
+  startGame() {
     this.setState({
       started: true,
     });
    this.timerIntervalId =  setInterval(this.timer,1000);
   };
 
-  timer = () => {
+  timer() {
 this.setState({
   time: this.state.time + 1
 })
   }
 
-  ballMovement = (event) => {
+  ballMovement (event) {
     if (!this.state.started) return;
     let x = this.state.x;
     let y = this.state.y;
