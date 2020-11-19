@@ -1,4 +1,4 @@
-import React, { Component, useState } from "react";
+import React from "react";
 import "../styles/App.css";
 class Timer extends React.Component {
   constructor(props) {
@@ -35,12 +35,16 @@ this.setState({
     let y = this.state.y;
     if (event.keyCode === 37) {
       x -= 5;
+      console.log("Left Key pressed");
     } else if (event.keyCode === 38) {
       y -= 5;
+      console.log("Up Key pressed");
     } else if (event.keyCode === 39) {
       x += 5;
+      console.log("Right Key pressed");
     } else if (event.keyCode === 40) {
       y += 5;
+      console.log("Down Key pressed");
     }
     if(x === 250 && y === 250){
       clearInterval(this.timerIntervalId);
