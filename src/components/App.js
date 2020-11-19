@@ -62,11 +62,12 @@ this.setState({
   render() {
     return (
       <>
+          <div className = "heading-timer">{this.state.time}</div>
         {!this.state.started ? (
           <button className = "start" onClick={this.startGame}>Start</button>
         ) : (
           <div>
-            <div className = "heading-timer">{this.state.time}</div>
+            
             <div
               className="ball"
               style={{ top: this.state.y, left: this.state.x }}
